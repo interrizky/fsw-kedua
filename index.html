@@ -74,7 +74,35 @@
           <img src="./assets/images/product-4.jpeg" class="w-100 h-100"></img>          
         </div>
         <div class="col-10 shadow-lg deskripsi">
+          <div class="row baris-satu">
+            <div class="col-4">
+              <h3>PRICE</h3>
+            </div>
+            <div class="col-8"></div>
+          </div>
+          <br/>
+          <br/>
+          <div class="row baris-dua">
+            <div class="col-4">List Package : </div>
+            <div class="col-8"></div>
+          </div>
+          <div class="row baris-tiga">
+            <div class="list-nama col-6">
+              <ol class="listing">
+                
+              </ol>
+            </div>
+            <div class="list-harga col-6">
+              <ul class="listing-harga" style="list-style-type: none; text-align: right;">
 
+              </ul>
+            </div>
+          </div>
+          <br/>
+          <div class="row baris-empat">
+              <div class="col-4">TOTAL</div>
+              <div class="col-8" style="text-align: right;">Rp 910.000</div>
+          </div>       
         </div>
       </div>
       <div class="row button">
@@ -167,6 +195,24 @@
             <div class="col-8" style="text-align: right;">Rp 910.000</div>
         </div>       
       `;
+
+      let flower = ["Plant Bucket 1 So Awesome", "Sun Flower Bucket 2 Amaze"];
+      let letFlowerCO = document.querySelector('.checkout .deskripsi .baris-tiga .list-nama .listing');
+      for (let index = 0; index < flower.length; index++) {
+        letFlowerCO.innerHTML += `<li>` + flower[index] + `</li>`
+      }
+
+      let grandTotal = 0;
+      let harga = [340.000, 570.000];
+      let letHargaCO = document.querySelector('.checkout .deskripsi .baris-tiga .list-harga .listing-harga');
+      for (let index = 0; index < harga.length; index++) {
+        letHargaCO.innerHTML += `<li>Rp ` + harga[index] + `</li>`
+        grandTotal += harga[index];      
+      }
+      
+      let grandPrize = document.querySelector('.checkout .deskripsi .baris-empat');
+      grandPrize.innerHTML = `<div class="col-8" style="text-align: right;">Rp `+ grandTotal + `</div>`;
+
       </script>
 
   </body>
