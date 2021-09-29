@@ -98,8 +98,8 @@
           </div>
           <br/>
           <div class="row baris-empat">
-              <div class="col-4">TOTAL</div>
-              <div class="col-8" style="text-align: right;">Rp 910.000</div>
+<!--               <div class="col-4">TOTAL</div>
+              <div class="col-8" style="text-align: right;">Rp 910.000</div> -->
           </div>       
         </div>
       </div>
@@ -123,9 +123,10 @@
             <li class="a-style-footer-x">Home</li>
           </ul>
         </div>
-      </div>      
+      </div>
+    </div>
 
-      <script type="text/javascript">
+    <script type="text/javascript">
       let openingGambar = document.querySelector('.opening .opening-gambar');
       openingGambar.innerHTML = `<img src="./assets/images/product-3.jpg" class="w-100 h-100"></img>`
       let openingText = document.querySelector('.opening .opening-text .wrapper-opening-text-details');
@@ -151,71 +152,76 @@
         }
       }
 
-      let deskripzi = document.querySelector('.product-details .deskripsi')
-      deskripzi.innerHTML = `
-        <p style="text-align: center;">ABOUT</p>
-        <hr class="new">
-        <br/>
-        <p class="tentang">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      `;
+      // let deskripzi = document.querySelector('.product-details .deskripsi')
+      // deskripzi.innerHTML = `
+      //   <p style="text-align: center;">ABOUT</p>
+      //   <hr class="new">
+      //   <br/>
+      //   <p class="tentang">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      // `;
 
-      let deskripsiCO = document.querySelector('.checkout .deskripsi');
-      deskripsiCO.innerHTML = `          
-        <div class="row baris-satu">
-          <div class="col-4">
-            <h3>PRICE</h3>
-          </div>
-          <div class="col-8"></div>
-        </div>
-        <br/>
-        <br/>
-        <div class="row baris-dua">
-          <div class="col-4">List Package : </div>
-          <div class="col-8"></div>
-        </div>
-        <div class="row baris-tiga">
-          <div class="col-4">
-            <ol>
-              <li>Plant Bucket 1 So Awesome</li>
-              <li>Sun Flower Bucket 2 Amaze</li>
-            </ol>
-          </div>
-          <div class="col-8">
-            <ul style="list-style-type: none">
-              <li style="text-align: right;">Rp 340.000</li>
-              <li style="text-align: right;">Rp 570.000</li>
-            </ul>
-          </div>
-        </div>
-        <br/>
-        <div class="row baris-empat">
-            <div class="col-4">TOTAL</div>
-            <div class="col-8" style="text-align: right;">Rp 910.000</div>
-        </div>       
-      `;
+      // let deskripsiCO = document.querySelector('.checkout .deskripsi');
+      // deskripsiCO.innerHTML = `          
+      //   <div class="row baris-satu">
+      //     <div class="col-4">
+      //       <h3>PRICE</h3>
+      //     </div>
+      //     <div class="col-8"></div>
+      //   </div>
+      //   <br/>
+      //   <br/>
+      //   <div class="row baris-dua">
+      //     <div class="col-4">List Package : </div>
+      //     <div class="col-8"></div>
+      //   </div>
+      //   <div class="row baris-tiga">
+      //     <div class="col-4">
+      //       <ol>
+      //         <li>Plant Bucket 1 So Awesome</li>
+      //         <li>Sun Flower Bucket 2 Amaze</li>
+      //       </ol>
+      //     </div>
+      //     <div class="col-8">
+      //       <ul style="list-style-type: none">
+      //         <li style="text-align: right;">Rp 340.000</li>
+      //         <li style="text-align: right;">Rp 570.000</li>
+      //       </ul>
+      //     </div>
+      //   </div>
+      //   <br/>
+      //   <div class="row baris-empat">
+      //       <div class="col-4">TOTAL</div>
+      //       <div class="col-8" style="text-align: right;">Rp 910.000</div>
+      //   </div>       
+      // `;
 
       let flower = ["Plant Bucket 1 So Awesome", "Sun Flower Bucket 2 Amaze"];
       let bungaCO = document.querySelector('#listing-nama');
       // let bungaCO = document.getElementById('listing-nama');
       for (let i = 0; i < flower.length; i++) {
-        // bungaCO.innerHTML += `<li></li>`;
+        bungaCO.innerHTML += `<li>${flower[i]}</li>`;
         //console.log(flower[i]);
       }
-      console.log(bungaCO);
+      //console.log(bungaCO);
 
       let grandTotal = 0;
-      let harga = [340.000, 570.000];
+      let harga = [340000, 570000];
       //let letHargaCO = document.querySelector('.checkout .deskripsi .baris-tiga .list-harga .listing-harga');
-      let hargaCO = document.getElementById('#listing-harga');
+      //let hargaCO = document.getElementById('#listing-harga');
+      let letHargaCO = document.querySelector('#listing-harga');
       for (let i = 0; i < harga.length; i++) {
         letHargaCO.innerHTML += `<li>Rp${harga[i]}</li>`;
         grandTotal += harga[i];      
       }
+      //console.log(hargaCO);
+      //console.log(grandTotal);
       
       let grandPrize = document.querySelector('.checkout .deskripsi .baris-empat');
-      grandPrize.innerHTML = `<div class="col-8" style="text-align: right;">Rp `+ grandTotal + `</div>`;
+      grandPrize.innerHTML = `
+        <div class="col-4">TOTAL</div>      
+        <div class="col-8" style="text-align: right;">Rp${grandTotal}</div>
+      `;
 
-      </script>
-
+    </script>
   </body>
 </html>
