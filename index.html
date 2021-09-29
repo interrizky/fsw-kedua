@@ -88,12 +88,12 @@
           </div>
           <div class="row baris-tiga">
             <div class="list-nama col-6">
-              <ol class="listing">
+              <ol class="listing-nama" id="listing-nama">
                 
               </ol>
             </div>
             <div class="list-harga col-6">
-              <ul class="listing-harga" style="list-style-type: none; text-align: right;">
+              <ul class="listing-harga" id="listing-harga" style="list-style-type: none; text-align: right;">
 
               </ul>
             </div>
@@ -197,17 +197,21 @@
       `;
 
       let flower = ["Plant Bucket 1 So Awesome", "Sun Flower Bucket 2 Amaze"];
-      let letFlowerCO = document.querySelector('.checkout .deskripsi .baris-tiga .list-nama .listing');
-      for (let index = 0; index < flower.length; index++) {
-        letFlowerCO.innerHTML += `<li>` + flower[index] + `</li>`
+      let bungaCO = document.querySelector('#listing-nama');
+      // let bungaCO = document.getElementById('listing-nama');
+      for (let i = 0; i < flower.length; i++) {
+        // bungaCO.innerHTML += `<li></li>`;
+        //console.log(flower[i]);
       }
+      console.log(bungaCO);
 
       let grandTotal = 0;
       let harga = [340.000, 570.000];
-      let letHargaCO = document.querySelector('.checkout .deskripsi .baris-tiga .list-harga .listing-harga');
-      for (let index = 0; index < harga.length; index++) {
-        letHargaCO.innerHTML += `<li>Rp ` + harga[index] + `</li>`
-        grandTotal += harga[index];      
+      //let letHargaCO = document.querySelector('.checkout .deskripsi .baris-tiga .list-harga .listing-harga');
+      let hargaCO = document.getElementById('#listing-harga');
+      for (let i = 0; i < harga.length; i++) {
+        letHargaCO.innerHTML += `<li>Rp${harga[i]}</li>`;
+        grandTotal += harga[i];      
       }
       
       let grandPrize = document.querySelector('.checkout .deskripsi .baris-empat');
